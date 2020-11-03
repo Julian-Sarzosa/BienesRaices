@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--Tab auto completa el comando que queremos-->
+<html lang="en">
+
+<head>
+    <!--Configuración principal y navegador-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nosotros</title>
+    <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Peddana&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--siempre se pone la hoja de estilos que realizamos de ultima, para que 
+        los estilos trabajen sobre los predeterminados y no al revez-->
+</head>
+
+<body>
+
+    <!-- id="principal-header" solo un id por elemento-->
+    <header class="site-header">
+        <!-- Encabezado de la pagina web, parte superior de la web -->
+
+        <div class="container content-header">
+
+            <div class="bar">
+
+                <!-- Las imagenes se agregan gracias a al etiqueta img mas tab, el atributo src es la ubicacion de la imagen y
+         el atributo alt es un texto alternativo -->
+
+                <a href="/">
+                    <!-- se utiliza para redirigir desde el logotipo a la pagina principal, tambien puede usarse para 
+                      redirigir cualquier cosa a la pagina principal o a algun enlace.-->
+
+                    <img src="img/logo.svg" alt="Logo de Bienes Raices">
+
+                    <!-- El formato de imagen svg, es el que permite utilizar cualquier dimension de imagen para que no se distorcione 
+        o pixele la imagen sin importat rl tamaño de la pantalla o resolucion que se utilice, se generan mediante ilustrator y adobe xd -->
+
+                </a>
+
+                <nav class="navy">
+                    <!-- Navegación  debido a que hay enlaces -->
+
+                    <!-- para crear enlaces seutiliza a y tab, donde dice href entre las comillas va el enlace, y entre los simbolos va el texto -->
+
+                    <a href="index.html">Inicio</a>
+
+                    <!-- con este enrutador de enlaces nos solo se puede ir a las paginas creadas si no a cualquiera un ejemplo es una pagina 
+         de peliculas y re enrutarlo a netflix, para esto hay que utilizar completa y correctamente el protocolo es decir 
+         http://www.netflix.com, debido a que estos enlaces no son archivos locales, si no una url, es recomendado utilizar 
+         un target="_blank" antes de href, para abrir una pagina alterna a la que te encuentras debido a que ese dominio no es nuestro.
+        target="_self" es el default el cual indica que abra los enlaces en la misma pagina-->
+
+                    <a href="anuncios.html">Anuncios</a>
+
+                    <a href="blog.html">Blog</a>
+
+                    <a href="contacto.html">Contacto</a>
+
+                </nav>
+
+            </div>
+
+            <!-- Utilizar correctamente los heading, permite una facil indexación, que el buscador lo pueda encontrar
+         ademas de permitir encontrar su contenido relacionado -->
+            <!-- dependiendo de su numeración es mas grande el contenido del texto, h1 es el texto
+         mas grande e importante respecto al contenido de la pagina, se utiliza maximo uno por pagina, 
+         continuando desde h2 hasta h6, que son contenidos mas pequeños y no tan importantes como el h1,
+         respecto a orden y relevancia deacuerdo a la pagina y su configuración, el h6 es el tipo de 
+         escritura maxima que existe, hay que utilizar siempre las etiquetas extandar -->
+
+        </div>
+
+    </header>
+
+    <main class="container">
+        <h1 class="fw-500 center-text">Conoce Mas Sobre Nosotros</h1>
+        <div class="our-content">
+            <div class="imagen">
+                <img src="img/nosotros.jpg" alt="Imagen sobre Nosotros">
+            </div>
+            <div class="our-text">
+                <blockquote>25 Años de Experiencia</blockquote>
+
+                <p>Quisque scelerisque nisi ipsum, id cursus tellus iaculis gravida.
+                    Curabitur vehicula ligula nec tempus ultricies.
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    Donec rutrum massa vitae pellentesque ultrices.
+                    Ut euismod orci sit amet condimentum ornare.
+                    Nam id sodales purus. Curabitur sed dapibus orci.
+                    Aliquam vulputate consectetur lacinia.
+                    Vestibulum lobortis eu mauris eu malesuada.
+
+                </p>
+
+                <p>Aenean eu pharetra sem.
+                    Nunc eget nulla nec nisi semper efficitur nec eu ex.
+                    Quisque laoreet dui ut feugiat aliquam.
+                    Donec interdum imperdiet ligula, et faucibus nisl eleifend non.
+                    Morbi placerat augue tempor, bibendum urna et, imperdiet enim.
+                    Aliquam rhoncus magna lectus.
+                    Cras scelerisque, nunc in convallis vestibulum, lectus enim varius ipsum, at mattis tellus lectus in
+                    ex.
+                    Mauris turpis ante, tincidunt eget metus ac, ultrices mollis eros.
+                    Praesent facilisis nisl elit, eu viverra libero commodo ac.
+                    Aenean non ipsum est. Proin consectetur orci sed lobortis egestas.
+                    Duis tincidunt risus sodales placerat vestibulum.
+                </p>
+
+            </div>
+        </div>
+
+    </main>
+
+    <section class="container section">
+        <!-- si el primer hijo es un encabezado osea tiene un heading y es diferente a la primera sección
+                   , debe tener un section -->
+
+        <h2 class="fw-900 center-text">Nosotros Brindamos</h2>
+        <!--      Los parrafos son los que cuentan el contenido, es decir, explican de que trata la pagina, similar
+         a un libro, el cual tiene Su titulo en este caso h1, su subtitulo h2, y su contenido que es el p
+   <p>Parrafo</p>
+         break o br se utiliza para saltos de linea en especial en los contenidos, es decir los parafos p
+   <br>
+   <p>Parrafo con <br> salto de <br> linea </p>
+        es recomendable crear diferentes parrafos, debido a que el salto de linea ya no se utiliza -->
+        <!-- Los heading o h son mas importantes que los parrafos o p, por eso hay que tener en cuenta el diseño
+             de la pagina y deacuerdo a esto organizar los textos -->
+
+        <div class="icons-ours">
+
+            <div class="icon">
+                <!-- agrupacion que identifica la division dentro de una section que lo contiene-->
+
+                <img src="img/icono1.svg" alt="Icono de Seguridad">
+                <h3>Seguridad</h3> <!-- este heading compone el anterior -->
+                <!-- se utilizan dos clases encabezado y mayusculas -->
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae adipisci ut aut eveniet accusantium
+                    sapiente quibusdam blanditiis enim. Consequatur minima harum saepe corrupti corporis ullam eligendi
+                    iusto dolorum aliquam natus!</p>
+                <!-- el lorem es un codigo de muestra, el cual se utiliza para organizar los parrafos, su contenido y visualización cuando no
+         se tiene el contenido final que debe llevar el parrafo-->
+            </div>
+
+            <div class="icon">
+                <img src="img/icono2.svg" alt="Icono de Mejor Precio">
+
+                <h3>El mejor precio</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae adipisci ut aut eveniet accusantium
+                    sapiente quibusdam blanditiis enim. Consequatur minima harum saepe corrupti corporis ullam eligendi
+                    iusto dolorum aliquam natus!</p>
+            </div>
+
+            <div class="icon">
+                <img src="img/icono3.svg" alt="Icono de a Tiempo">
+
+                <h3>A tiempo</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae adipisci ut aut eveniet accusantium
+                    sapiente quibusdam blanditiis enim. Consequatur minima harum saepe corrupti corporis ullam eligendi
+                    iusto dolorum aliquam natus!</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="site-footer section">
+        <!--Explica que es la parte inferior de las entradas-->
+
+        <div class="container container-footer">
+
+            <nav class="navy">
+
+                <a href="index.html">Inicio</a>
+
+                <a href="anuncios.html">Anuncios</a>
+
+                <a href="blog.html">Blog</a>
+
+                <a href="contacto.html">Contacto</a>
+
+            </nav>
+
+            <p class="copyright">Todos los deréchos Reservados &copy;</p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

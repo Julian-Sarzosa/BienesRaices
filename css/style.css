@@ -1,0 +1,493 @@
+/* #principal-header{ 
+     LLamado id 
+    background-image: "img/header.jpg";
+}
+
+h1{
+    color: rgb(20, 43, 145);
+    font-size: 20px;
+}
+
+la clase puede reutilizarse, sin embargo el id solo es para un objeto por pagina, no se puede repetir por sintaxis
+se recomiendan clases para mayor facilidad
+no se pueden utilizar dos diferentes id en un elemento, sin embargo clases si, lo que permite configurar mas el elemento especifico
+.encabezado {
+color: red;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+ */
+
+ /* Global */
+
+ /*El rem se utiliza para pantallas con mucha definición y es la mejor unidad con la que se debe trabajar */
+
+/*Configuración necesaria para utilizar las medidas de dimensionamiento con rems,
+necesario para que equivalgan 10px a 1 rem y sea mucho mas facil utilizar esta unidad*/
+html{ /*Correccion de anchos, implementación obligatoria*/
+    box-sizing: border-box; 
+    font-size: 62.5%; /*Reset para Rems - 62.5% = 10px de 16 px, es un estandar que utilizan todas las paginas */
+}
+*, *:before, *:after{ /*Correccion de anchos, implementación obligatoria*/
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'David Libre', serif;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+img{ /*convierte las imagenes responsivas*/
+    max-width: 100%; /*permite organizar las imagenes deacuerdo al espacio en el que se encuentran
+    y no ocupar de mas, ocupando el 100 porciento del contenedor que la contiene,
+    deacuerdo al porcentaje que se establezca*/
+}
+
+.container{
+    max-width: 120rem; /*equivale a 1200 px */
+/*     margin-left: auto;  configuración en direcciones especificas 
+    margin-right: auto;
+    margin: 0 auto 0 auto;  configuracion en todas las direcciones de forma general*/
+    margin: 0 auto; /*Centra el contenido horizontal*/
+}
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+h4{
+    font-size: 2.2rem;
+}
+
+/*Utilidades*/
+
+.section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-100{
+    font-weight: 100;
+}
+
+.fw-200{
+    font-weight: 200;
+}
+
+.fw-300{
+    font-weight: 300;
+}
+
+.fw-400{
+    font-weight: 400;
+}
+
+.fw-500{
+    font-weight: 500;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+
+.fw-700{
+    font-weight: 700;
+}
+
+.fw-800{
+    font-weight: 800;
+}
+
+.fw-900{
+    font-weight: 900;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.d-block{
+    display: block!important;
+}
+
+.center-content{
+    max-width: 80rem;
+}
+
+/*Botons*/
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem; /*margen dentro*/
+    margin-top: 3rem; /*margen por fuera*/
+    /*Los enlaces y las imagenes tienen un display defaut "line", el display y es el que nos permite modificar sus dimensiones*/
+    display: inline-block;
+    text-align: center;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.boton-orange{
+    background-color: darkorange;
+}
+.boton-green{
+    background-color: darkgreen;
+}
+
+ /*Header*/
+
+ .site-header{
+     background-color: #333333;
+     padding: 1rem 0 3rem 0;
+ }
+
+.init.site-header{ /*metodo para utilizar dos clases*/
+    background: url(../img/header.jpg); /*para utilizar general la configuracion*/
+    background-position: center center; /* parametriza la imagen en el centro */
+    background-size: cover; /* configura la imagen para que tome todo el especio disponible de la pantalla*/
+    height: 10rem; /*dimencionamiento deacuerdo a la pantalla*/
+    min-height: 60rem; /* estandarizar una medida minima = 600px pixeles*/
+}
+
+.content-header{
+    height: 100%;/*Utiliza todo el contenedor padre*/
+    display: flex;
+    flex-direction: column; /*organiza el contenido uno encima del otro, row es defaul, y row-reverse los intercambia*/
+    justify-content: space-between;/*pone los elementos en la posicion de arriba al inicio y los de abajo al final*/
+}
+
+.content-header h1{
+    color: white;
+    padding-bottom: 2rem; /*distancia entre el contenido y el espacio de abajo hacia arriba*/
+    max-width: 60rem; /*dimensionamiento del contenido*/
+    line-height: 5rem; /*interlineado */
+}
+
+.bar{
+    display: flex; /*organiza el contenido alado del anterior*/
+    justify-content: space-between; /* dISTANCIAMIENTO ENTRE CONTENIDO CON EL MISMO ESPACIO*/
+    align-items: center; /*alinea los elementos horizontalmente, alinea los elementos en el centro de su masa, es decir los alinea en el eje x*/
+    padding-top: 3rem; /*espacio dentro del elemento = 30px, margin bajaria todo el contenido*/
+}
+
+/** Navegación **/
+
+.navy a{/*Escogemos todos los elementos de navy*/
+    color: white;
+    /*color: rgba(255,255,255, 1); el ultimo valor indica la transparencia
+    su rango va de 0 a 1, cualquier valor de 0 a 1 en decimal, funciona con
+    rgba y hsla*/
+    text-decoration: none; /*elimina la linea debajo de las letras*/
+    font-size: 1.8rem; /*18px*/
+    font-family: 'Peddana', serif;
+    margin-right: 2rem; /*20px*/
+}
+
+.navy a:hover{ /*posicionamiento sobre los elementos de la pagina, propiedades de cada selector*/ /*Seudo selector*/
+    color: darkblue; /*cambia el color al posarnos sobre alguno de ellos*/
+}
+
+.navy a:last-of-type{ /*Seudo selector, Escoge el utimo elemento, dependiendo del tipo: "" of type*/
+    margin: 0;
+}
+
+/*Nuestros iconos*/
+
+.icons-ours{
+    display: flex; /* organiza los iconos uno alado del otro*/
+    justify-content: space-between;
+}
+
+.icon{
+    /*se utiliza fles debido a que estamos trabajando con flexbox*/
+    flex-basis: calc(33.3% - 1rem); /* Define el ancho de los componentes individualmente, con el comando cal, se realizan los calculos,
+     se debe dejar espacio entre numeros y operadores (33.3% es para dividirlo del mismo tamaño)*/
+     text-align: center; /*Este es el comando que permite centrar el texto y la imagen*/
+}
+
+.icon h3{/* se utiliza para optimizar el codigo y modificar la seccion que se requiere sin tener que cambiarlos uno por uno */
+    text-transform: capitalize; /*comando global que me permite cambiar mayusculas y o minusculas del texto*/
+}
+
+/*Advert*/
+.ad-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /*( acumula el espacio necesario y hace el salto de linea para mejor visualizacion de los elementos)*/
+}
+.ad{
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: lemonchiffon; *//*Define el tamaño del borde, estilo y el color, este se simplifica*/
+    border: 1px solid lemonchiffon;
+    background-color: #F5F5F5;
+    /*CODIGO SIMPLIFICADO DEL FLEX*/
+    /*
+    flex: 0 0 calc(33.3% - 1rem);
+    deacuerdo al orden
+    flex-grow: 0;
+    flex-shrink: 0; (Conserva los valores y tamaños)
+    flex-basis: calc(33.3% - 1rem);    
+    */
+    flex: 0 0 calc(33.3% - 1rem);
+    margin-bottom: 2rem;
+}
+
+.ad-content{
+    padding: 2rem;
+}
+.ad-content h3, .ad-content p{/* con  una coma podemos reutilizar las clases para aplicar la configuración que queramos a la vez */
+    margin: 1rem;
+}
+.price{
+    color: darkgreen;
+    font-weight: 700;
+}
+.caracteristic-icon{
+    /*list-style: circle;viñetas*/
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 50rem;
+}
+.caracteristic-icon li{
+    /*flex: 1; FACTOR DE CRECIMIENTO NO SE UTILIZA PARA QUE FUNCIONE JUSTIFY CONTENT SPACE EVENLY*/
+    display: flex;
+}
+.caracteristic-icon li img{
+    margin-right: 2rem;
+}
+.view-all{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*Contact Home*/
+.contact-img{
+    background: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-content{
+    flex: 1;/*FACTOR DE CRECIMIENTO*/
+    color: white;
+
+}
+
+.contact-content p{
+    font-size: 1.8rem;
+}
+
+/*Seccion Inferior*/
+
+.lower-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower-section .blog{
+    flex-basis: 60%; /*LA BASE, DIMENSIONAMIENTO MAYOR AL BLOG Y LOS TESTIMONIALES EL 40%*/
+}
+
+.lower-section .testimonials{
+    flex-basis: calc(40% - 2rem); /* configuracion para que tome el 40%*/
+}
+
+.entry-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entry-blog:last-of-type{
+    margin-bottom: 0;
+}
+
+.entry-blog .img{
+    flex-basis: 40%;
+}
+
+.entry-blog .text-entry{
+    flex-basis: calc(60% - 3rem);
+}
+.text-entry a{
+    color: black;
+    text-decoration: none;
+}
+.text-entry h4{
+    margin: 0;
+    line-height: 1.4;
+}
+
+.text-entry h4::after{/*crear un elemento conocido como seudo elemento despues del h4, es seudo elemento porque no se puede seleccionar, ni subrayar*/
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: darkgreen;
+    margin-top: 1rem;
+}
+
+.text-entry span{
+    color: darkorange;
+}
+
+/*Testimoniales*/
+
+.testimonial{
+    background-color: rgba(9, 156, 9,0.6); /*aplicando transparencia*/
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+}
+
+.testimonial p{
+    text-align: right;
+}
+
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+}
+
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/*Footer*/
+
+.site-footer{
+    background-color: #333333;
+    margin: 0;
+}
+
+.container-footer{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright{
+    margin: 0;
+    color: white;
+}
+
+/****Intern Pages****/
+
+/*Nosotros*/
+
+.our-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2rem;
+}
+
+.our-text blockquote {
+    font-weight: 900;
+    font-size: 2.6rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+.our-text p{
+    font-size: 2rem;
+}
+
+/*Anuncio*/
+.propiety-summary{
+    display: flex;
+    justify-content: space-between; /*alinea verticalmente*/
+    align-items: center;  /*alinea horizontalmente*/
+}
+
+/*Contacto*/
+
+legend{
+    font-size: 2.4rem;
+    color: #333333;
+}
+
+label{
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+.contact p{
+    font-size: 1.8rem;
+}
+/*
+input[type="text"],
+input[type="email"]{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: rgba(224, 215, 215, 0.8);
+    margin: 1rem 0;
+    border: none;
+    border-radius: 1rem;
+}
+Escoge solo los input tipo text deacuerdo a la seleccion en los corchetes
+*/
+input:not([type="submit"]) /*Excluye el selector submit*/
+,textarea
+, select { 
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: rgba(224, 215, 215, 0.8);
+    margin: 1rem 0;
+    border: none;
+    border-radius: 1rem;
+}
+
+.input[type="radio"]{
+    width : auto; /* Asume el espacio que necesita solamente */
+    margin: 0;
+}
+
+select{
+    -webkit-appearance: none; /* Sufiojos que no se usan en la cotidianidad, pero muchas veces son necesarios*/
+    appearance: none;
+}
+
+textarea{
+    height: 20rem;
+}
+
+fieldset{
+    margin-bottom: 1.4rem;
+}
+
+.contact-form{
+    max-width: 40rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* alinea horizontalmente */
+}
